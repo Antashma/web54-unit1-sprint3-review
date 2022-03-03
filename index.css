@@ -1,0 +1,183 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing:border-box;
+    max-width:100%; /*you can never be bigger than your parent - this is going to stop that dreaded horizontal scroll bar*/
+    /* border:1px solid red; */
+}
+
+/*general styles*/
+html {
+    /* https://nekocalc.com/px-to-rem-converter */
+    font-size:62.5%; /* 1 rem = 10px */
+}
+
+body {
+    line-height:1.5;
+    font-size:1.8rem;
+    /* https://www.rapidtables.com/convert/color/hex-to-rgb.html */
+    /* main reason to use rbg code is for transparency */
+    color:#4F4f4f;
+}
+
+h1, h2, h3 {
+    letter-spacing: 3px;
+    text-align:center;
+    /* https://fonts.google.com/ */
+    font-family: 'Gaegu', cursive;
+}
+
+h1 {
+    font-size:5rem;
+    color: #FBFFFB;
+}
+
+h2 {
+    font-size:4rem;
+}
+
+h3 {
+    font-size:2.5rem;
+}
+
+a {
+    text-decoration:none;
+    color:#4F4f4f;
+}
+
+section {
+    padding: 4% 0;
+}
+
+#shop {
+    background-color: rgb(251, 255, 251);
+}
+
+.container {
+    display: flex;
+    text-align: center;
+}
+
+.container div {
+    width: 50%;
+}
+
+.container .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0;
+}
+
+/* https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_background_hero */
+.bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.succulents {
+    /* use css images when it's decorative, use html imgs when it's important content-wise */
+    background-image: url('images/succulants.jpg');
+}
+
+.cacti {
+    background-image: url('images/cacti.jpg');
+}
+
+.tropical {
+    background-image: url('images/tropicals.jpg');
+}
+
+/* tablet styles */
+@media(max-width: 800px) {
+    * {
+        /* border:1px solid cyan; */
+    }
+
+    .container .text div {
+        width: 75%;
+    }
+}
+
+@media(max-width: 300px) {
+    * {
+        /* border:1px solid purple; */
+    }
+
+    .container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    
+    .container div {
+        width: 90%;
+    }
+    
+    .container .text {
+        width: 90%;
+    }
+    
+    .bg {
+        height: 60vh;
+    }
+
+    .mobile {
+        flex-direction: column-reverse;
+    }
+}
+
+/* Pseudoclasses: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes */
+/* If they really need to see specific flexbox props: https://codepen.io/keirankozlowski/pen/yLPpGJr */
