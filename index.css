@@ -57,6 +57,7 @@ table {
     /* border:1px solid red; */
 }
 
+
 /*general styles*/
 html {
     /* https://nekocalc.com/px-to-rem-converter */
@@ -140,44 +141,43 @@ section {
     background-image: url('images/tropicals.jpg');
 }
 
-/* tablet styles */
 @media(max-width: 800px) {
-    * {
-        /* border:1px solid cyan; */
-    }
+ header nav {
+     display: flex;
+     justify-content: space-around;
+ }
 
-    .container .text div {
-        width: 75%;
-    }
 }
 
+
+
+/* add mobile style for 300px below*/
 @media(max-width: 300px) {
-    * {
-        /* border:1px solid purple; */
-    }
 
-    .container {
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-    }
-    
-    .container div {
-        width: 90%;
-    }
-    
-    .container .text {
-        width: 90%;
-    }
-    
-    .bg {
-        height: 60vh;
-    }
+header nav {
+    flex-direction: column;
+    align-items: center;
 
-    .mobile {
-        flex-direction: column-reverse;
-    }
 }
 
-/* Pseudoclasses: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes */
-/* If they really need to see specific flexbox props: https://codepen.io/keirankozlowski/pen/yLPpGJr */
+header nav a {
+    padding: 10px 0;
+    background-color: palegreen;
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    flex-direction: column;
+}
+
+.container div {
+    width: 100vw;
+    height: 50vh;
+}
+
+.cacti {
+    order: -1;
+}
+
+}
